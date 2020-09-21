@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'm61-)!csjs(*2-dv_@w2eewgkos^k-1ma@vwdq5d6xw$$_6a5m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['test.reolib.com','167.71.205.55:8000']
 
