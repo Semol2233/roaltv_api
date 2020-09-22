@@ -25,7 +25,7 @@ SECRET_KEY = 'm61-)!csjs(*2-dv_@w2eewgkos^k-1ma@vwdq5d6xw$$_6a5m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['test.reolib.com','167.71.205.55']
+ALLOWED_HOSTS = ['test.reolib.com','167.71.205.55','127.0.0.1']
 
 
 # Application definition
@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['test.reolib.com','167.71.205.55']
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'roaltv_app',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -121,3 +122,33 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR,),'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL ='/media/'
+
+
+
+
+
+REST_FRAMEWORK = {
+
+
+    # 'DEFAULT_PAGINATION_CLASS':(
+    #     #  'auth_global.pagnation.Coustompagnation'
+    #      ),
+
+    # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    # 'PAGE_SIZE': 6
+
+    # 'DEFAULT_FILTER_BACKENDS': (
+    #      'django_filters.rest_framework.DjangoFilterBackend'
+    #      ),
+    #   'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    #   'PAGE_SIZE': 4,
+
+      'DEFAULT_RENDERER_CLASSES': [
+           'rest_framework.renderers.JSONRenderer',
+       ],
+       'DEFAULT_PARSER_CLASSES': [
+           'rest_framework.parsers.JSONParser',
+       ]
+    
+
+}
