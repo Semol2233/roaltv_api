@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['test.reolib.com','167.71.205.55','127.0.0.1']
 
-
+CORS_ORIGIN_ALLOW_ALL = True
 # Application definition
 
 INSTALLED_APPS = [
