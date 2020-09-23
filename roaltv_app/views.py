@@ -39,7 +39,6 @@ class dtls_view(generics.RetrieveAPIView):
     lookup_field       = ('id')
 
 
-
 class youtube_playlist(pagination.PageNumberPagination):
     page_size = 3
     page_size_query_param = 'page_size'
@@ -59,7 +58,7 @@ class API_objedfcts(APIView, PaginationHandlerMixin):
     def get(self, request, category, *args, **kwargs):
         authors = catgory_list.objects.filter(cat_name=category).values('cat_name')
         if authors:
-            posts = post_models.objects.filter(catgory__cat_name=category).values('title', 'description', 'release_date','img_link').order_by('-id')
+            posts = post_models.objects.filter(catgory__cat_name=category).values('id','title', 'description', 'release_date','img_link').order_by('-id')
             for author in list(authors):
                 response = {
                 'Sports_page': author['cat_name'],
