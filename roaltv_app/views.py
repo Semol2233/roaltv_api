@@ -61,7 +61,7 @@ class API_objedfcts(APIView, PaginationHandlerMixin):
             posts = post_models.objects.filter(catgory__cat_name=category).values('id','title', 'description', 'release_date','img_link').order_by('-id')
             for author in list(authors):
                 response = {
-                'Sports_page': author['cat_name'],
+                'Sports_page': author['catgory__cat_name'],
 
                 }
             page = self.paginate_queryset(list(posts))
