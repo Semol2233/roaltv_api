@@ -33,7 +33,7 @@ class UserDettails(serializers.HyperlinkedModelSerializer):
     
 
 class dtls_sero(serializers.ModelSerializer):
-
+    catgory         = cat_list(read_only=True,many=True, required=False)
     class Meta:
         model = post_models
         fields = [
