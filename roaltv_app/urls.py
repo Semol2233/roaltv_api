@@ -9,7 +9,11 @@ from rest_framework.urlpatterns import format_suffix_patterns
 
 urlpatterns = [
      path('',views.API_objects.as_view()),
-     path('dtls/<id>/',views.dtls_view.as_view())
+     path('dtls/<id>/',views.dtls_view.as_view()),
+     path('playlist',views.youtubevideos_playlist.as_view()),
+     path('sports/<category>/',views.API_objedfcts.as_view()),
+     path('moviecover',views.coverimg.as_view()),
+     path('livetv_link',views.livetv_link.as_view()),
 
 
      

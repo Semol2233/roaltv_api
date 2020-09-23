@@ -11,7 +11,7 @@ class catgory_list(models.Model):
 
 class post_models(models.Model):
     title          = models.CharField(max_length=255)
-    catgory        = models.ForeignKey(catgory_list,on_delete=models.CASCADE ,blank=True)
+    catgory        = models.ManyToManyField(catgory_list,blank=True)
     description    = models.TextField(blank=True)
     release_date   = models.DateField(auto_now_add = True)
     # views          = models.IntegerField(blank=True, default=0)
@@ -19,3 +19,27 @@ class post_models(models.Model):
 
     def __str__(self):
         return self.title    
+
+
+
+class youtube_videoplaylist(models.Model):
+    playlist_name = models.CharField(max_length=255)
+    playlist_code = models.CharField(max_length=800)
+
+    def __str__(self):
+        return self.playlist_name    
+
+
+class movie_pageCover(models.Model):
+    moviePgaecover = models.URLField(max_length=400)
+
+    def __str__(self):
+        return self.moviePgaecover    
+
+
+class livetvlink(models.Model):
+    livetv_link = models.URLField(max_length=400)
+
+    def __str__(self):
+        return self.livetv_link    
+

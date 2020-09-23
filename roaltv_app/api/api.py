@@ -8,10 +8,17 @@ from django.contrib.auth import get_user_model
 
 
 
+class cat_list(serializers.ModelSerializer):
 
+    class Meta:
+        model = catgory_list
+        fields = [
+            'id',
+            'cat_name'
+    ]
 
-class UserDettails(serializers.ModelSerializer):
-
+class UserDettails(serializers.HyperlinkedModelSerializer):
+    catgory         = cat_list(read_only=True,many=True, required=False)
     class Meta:
         model = post_models
         fields = [
@@ -39,3 +46,30 @@ class dtls_sero(serializers.ModelSerializer):
         ]
 
     
+class youtubevideos_playlistseri(serializers.ModelSerializer):
+
+    class Meta:
+        model = youtube_videoplaylist
+        fields = [
+            'id',
+            'playlist_name',
+            'playlist_code'
+        ]
+
+
+class coverpage_seri(serializers.ModelSerializer):
+
+    class Meta:
+        model = movie_pageCover
+        fields = [
+            'moviePgaecover'
+        ]
+
+
+class livetv_pageLink(serializers.ModelSerializer):
+
+    class Meta:
+        model = livetvlink
+        fields = [
+            'livetv_link'
+        ]
