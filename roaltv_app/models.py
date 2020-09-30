@@ -24,6 +24,7 @@ class post_models(models.Model):
 
 class youtube_videoplaylist(models.Model):
     playlist_name = models.CharField(max_length=255)
+    channel_id    = models.CharField(max_length=800)
     playlist_code = models.CharField(max_length=800)
 
     def __str__(self):
