@@ -53,7 +53,8 @@ class youtubevideos_playlistseri(serializers.ModelSerializer):
         fields = [
             'id',
             'playlist_name',
-            'playlist_code'
+            'playlist_code',
+            'channel_id'
         ]
 
 
