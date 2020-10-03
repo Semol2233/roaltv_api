@@ -57,6 +57,17 @@ class youtubevideos_playlistseri(serializers.ModelSerializer):
             'channel_id'
         ]
 
+class shortplaylist(serializers.ModelSerializer):
+
+    class Meta:
+        model = youtube_videoplaylist
+        fields = [
+            'playlist_code',
+            'channel_id'
+        ]
+
+
+
 
 class coverpage_seri(serializers.ModelSerializer):
 
@@ -74,3 +85,5 @@ class livetv_pageLink(serializers.ModelSerializer):
         fields = [
             'livetv_link'
         ]
+
+

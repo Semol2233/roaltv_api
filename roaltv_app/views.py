@@ -33,6 +33,35 @@ class API_objects(generics.ListAPIView):
 #     lookup_field           = ('slug')
 
 
+class home_pagedata(generics.ListAPIView):
+    queryset               = post_models.objects.all()[:2]
+    serializer_class       = UserDettails
+    pagination_class       = StandardResultsSetPagination
+
+
+
+
+class bareking_news(generics.ListAPIView):
+    queryset               = post_models.objects.all()[:4]
+    serializer_class       = UserDettails
+    pagination_class       = StandardResultsSetPagination
+
+
+class all_news(generics.ListAPIView):
+    queryset               = post_models.objects.all()[4:]
+    serializer_class       = UserDettails
+    pagination_class       = StandardResultsSetPagination
+
+
+
+
+
+
+
+
+
+
+
 class dtls_view(generics.RetrieveAPIView):
     queryset           = post_models.objects.all()
     serializer_class   = dtls_sero
@@ -49,7 +78,10 @@ class youtubevideos_playlist(generics.ListAPIView):
     serializer_class = youtubevideos_playlistseri
     pagination_class = youtube_playlist
     
-
+class short_playlist(generics.ListAPIView):
+    queryset = youtube_videoplaylist.objects.all()[:1]
+    serializer_class = shortplaylist
+    pagination_class = youtube_playlist
 
 
 class API_objedfcts(APIView, PaginationHandlerMixin):

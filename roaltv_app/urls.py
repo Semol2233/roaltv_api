@@ -14,6 +14,11 @@ urlpatterns = [
      path('sports/<category>/',views.API_objedfcts.as_view()),
      path('moviecover',views.coverimg.as_view()),
      path('livetv_link',views.livetv_link.as_view()),
+     
+     path('latest',views.home_pagedata.as_view()),
+     path('mostpopular',views.bareking_news.as_view()),
+     path('breking_news',views.all_news.as_view()),
+     path('shortplaylist',views.short_playlist.as_view()),
 
 
      
