@@ -36,7 +36,6 @@ class API_objects(generics.ListAPIView):
 class home_pagedata(generics.ListAPIView):
     queryset               = post_models.objects.all()[:2]
     serializer_class       = UserDettails
-    pagination_class       = StandardResultsSetPagination
 
 
 
@@ -44,11 +43,10 @@ class home_pagedata(generics.ListAPIView):
 class bareking_news(generics.ListAPIView):
     queryset               = post_models.objects.all()[:4]
     serializer_class       = UserDettails
-    pagination_class       = StandardResultsSetPagination
 
 
 class all_news(generics.ListAPIView):
-    queryset               = post_models.objects.all()[4:]
+    queryset               = post_models.objects.all().order_by('-id')
     serializer_class       = UserDettails
     pagination_class       = StandardResultsSetPagination
 
