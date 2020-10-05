@@ -87,3 +87,19 @@ class livetv_pageLink(serializers.ModelSerializer):
         ]
 
 
+class about_seri(serializers.ModelSerializer):
+
+    class Meta:
+        model = about
+        fields = [
+            'description'
+        ]
+
+
+class about_seri(serializers.ModelSerializer):
+
+    class Meta:
+        model = admove_ad_code
+        fields = [
+            'description'
+        ]

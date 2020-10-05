@@ -44,3 +44,18 @@ class livetvlink(models.Model):
     def __str__(self):
         return self.livetv_link    
 
+
+
+
+class about(models.Model):
+    description    = models.TextField(blank=True)
+
+    def __str__(self):
+        return self.id    
+
+class admove_ad_code(models.Model):
+    ad_code    = models.TextField(blank=True)
+
+    def __str__(self):
+        return self.id    
+

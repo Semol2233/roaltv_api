@@ -113,4 +113,16 @@ class livetv_link(generics.ListAPIView):
     queryset = livetvlink.objects.all()
     serializer_class = livetv_pageLink
   
+
+
     
+
+class about(generics.ListAPIView):
+    queryset = about.objects.all()
+    serializer_class = about_seri
+  
+   
+class ad_code(generics.ListAPIView):
+    queryset = admove_ad_code.objects.all()
+    serializer_class = about_seri
+  

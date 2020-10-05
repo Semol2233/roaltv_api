@@ -19,10 +19,10 @@ urlpatterns = [
      path('mostpopular',views.bareking_news.as_view()),
      path('breking_news',views.all_news.as_view()),
      path('shortplaylist',views.short_playlist.as_view()),
-
-
+     path('about',views.about.as_view()), 
+     path('ad',views.ad_code.as_view()), 
      
 ]
-
+ 
 urlpatterns = format_suffix_patterns(urlpatterns)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
