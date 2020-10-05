@@ -124,5 +124,5 @@ class about(generics.ListAPIView):
    
 class ad_code(generics.ListAPIView):
     queryset = admove_ad_code.objects.all()
-    serializer_class = about_seri
+    serializer_class = adcode
   

@@ -96,10 +96,10 @@ class about_seri(serializers.ModelSerializer):
         ]
 
 
-class about_seri(serializers.ModelSerializer):
+class adcode(serializers.ModelSerializer):
 
     class Meta:
         model = admove_ad_code
         fields = [
-            'description'
+            'ad_code'
         ]

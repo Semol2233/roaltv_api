@@ -51,11 +51,11 @@ class about(models.Model):
     description    = models.TextField(blank=True)
 
     def __str__(self):
-        return self.id    
+        return self.description    
 
 class admove_ad_code(models.Model):
     ad_code    = models.TextField(blank=True)
 
     def __str__(self):
-        return self.id    
+        return self.ad_code    
 
