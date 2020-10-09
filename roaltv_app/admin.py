@@ -3,7 +3,7 @@ from django.contrib import admin
 admin.site.site_header = "RoalTv"
 
 
-class post_models(admin.ModelAdmin):
+class post_modelsAdmin(admin.ModelAdmin):
     list_display = ('title', 'catgory','release_date')
     list_filter = ('mfg_date', )
 
