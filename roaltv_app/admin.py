@@ -3,9 +3,10 @@ from django.contrib import admin
 admin.site.site_header = "RoalTv"
 
 
-class post_modelsAdmin(admin.ModelAdmin):
+class Post_modelsAdmin(admin.ModelAdmin):
     list_display = ('title', 'catgory','release_date')
     list_filter = ('mfg_date', )
+    search_fields = ("title__startswith", )
 
 from .models import *
 admin.site.register(post_models)
