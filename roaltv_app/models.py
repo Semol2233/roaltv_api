@@ -7,7 +7,9 @@ class catgory_list(models.Model):
     def __str__(self):
         return self.cat_name   
 
-
+    class Meta:
+        verbose_name = _("Create Category")
+        verbose_name_plural = _("Create Category")
 
 class post_models(models.Model):
     title          = models.CharField(max_length=255)
@@ -21,8 +23,8 @@ class post_models(models.Model):
         return self.title    
 
     class Meta:
-        verbose_name = _("My Book")
-        verbose_name_plural = _("My Books")
+        verbose_name = _("Post News")
+        verbose_name_plural = _("Post News")
 
 class youtube_videoplaylist(models.Model):
     playlist_name = models.CharField(max_length=255)
@@ -31,7 +33,9 @@ class youtube_videoplaylist(models.Model):
 
     def __str__(self):
         return self.playlist_name    
-
+    class Meta:
+        verbose_name = _("Create YouTube PlayList")
+        verbose_name_plural = _("Create YouTube PlayList")
 
 class movie_pageCover(models.Model):
     moviePgaecover = models.URLField(max_length=400)
@@ -39,13 +43,19 @@ class movie_pageCover(models.Model):
     def __str__(self):
         return self.moviePgaecover    
 
+    class Meta:
+        verbose_name = _("Cover Img")
+        verbose_name_plural = _("Cover Img")
+
 
 class livetvlink(models.Model):
     livetv_link = models.URLField(max_length=400)
 
     def __str__(self):
         return self.livetv_link    
-
+    class Meta:
+        verbose_name = _("Live Tv Url")
+        verbose_name_plural = _("Live Tv Url")
 
 
 
@@ -54,6 +64,10 @@ class about(models.Model):
 
     def __str__(self):
         return self.description    
+    class Meta:
+        verbose_name = _("About")
+        verbose_name_plural = _("About")
+
 
 class admove_ad_code(models.Model):
     ad_code    = models.TextField(blank=True)
