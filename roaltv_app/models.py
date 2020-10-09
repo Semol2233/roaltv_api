@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.utils.translation import ugettext_lazy as _
 class catgory_list(models.Model):
     cat_name           = models.CharField(max_length=255)
     release_date       = models.DateField(auto_now_add = True)
@@ -20,7 +20,9 @@ class post_models(models.Model):
     def __str__(self):
         return self.title    
 
-
+    class Meta:
+        verbose_name = _("My Book")
+        verbose_name_plural = _("My Books")
 
 class youtube_videoplaylist(models.Model):
     playlist_name = models.CharField(max_length=255)
