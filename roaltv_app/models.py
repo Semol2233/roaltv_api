@@ -1,5 +1,8 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+
+
+
 class catgory_list(models.Model):
     cat_name           = models.CharField(max_length=255)
     release_date       = models.DateField(auto_now_add = True)
