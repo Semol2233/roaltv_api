@@ -16,6 +16,11 @@ admin.site.register(youtube_videoplaylist)
 admin.site.register(movie_pageCover)
 admin.site.register(livetvlink)
 admin.site.register(about)
+admin.site.register(Profile)
+admin.site.register(apps_coverimg)
+
+
+
 
 
 

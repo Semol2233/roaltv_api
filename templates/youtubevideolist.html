@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">VLAN ID</th>
+        <th scope="col">DESCRIPTION</th>
+        <th scope="col">LOCATION</th>
+        <th scope="col">ACTION</th>
+        
+
+      </tr>
+    </thead>
+    <tbody>
+        {% for q in listyoutube %}
+        <tr>
+            <th scope="row">{{q.id}}</th>
+            <td>{{q.playlist_name}}</td>
+            <td>{{q.channel_id}}</td>
+            <td > {{q.playlist_code}}</td>
+            
+          </tr>
+      {% endfor %} 
+
+    </tbody>
+  </table>
+{% endblock content %}
+    
+
+

@@ -7,6 +7,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import get_user_model
 
 
+from roaltv_app.models import *
 
 class cat_list(serializers.ModelSerializer):
 

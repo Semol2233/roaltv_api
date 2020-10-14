@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+<div class="row">
+  {% for q in listdata %}
+  <div class="col-sm-2">
+    <div class="card" style="width: 200px;">
+      <img src="{{q.img_link}}" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">{{q.title}}</h5>
+      </div>
+    </div>
+  </div>
+  {% endfor %} 
+</div>
+
+
+{% endblock content %}
+    
+
+
