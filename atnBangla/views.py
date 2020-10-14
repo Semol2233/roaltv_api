@@ -1,7 +1,5 @@
 from django.shortcuts import render
 from django.http import JsonResponse
-
-# Create your views here.
 from rest_framework import viewsets
 from rest_framework import generics,permissions,mixins
 from rest_framework import pagination
@@ -9,9 +7,13 @@ from rest_framework import authentication
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.views import APIView
-
 from roaltv_app.models import *
 from atnBangla.api import *
+from django.http import JsonResponse
+from rest_framework.decorators import api_view
+from rest_framework import filters
+
+
 
 
 
@@ -31,10 +33,7 @@ class atn_youtube_playlist(generics.ListAPIView):
 # class apps_coverimg_view(generics.ListAPIView):
 #     queryset = apps_coverimg.objects.all().order_by('-id')
 #     serializer_class = apps_coverimg
-#     lookup_field       = ('typeimg')
 
-
-from rest_framework import filters
 
 class apps_coverimgview(generics.ListAPIView):
     queryset           = apps_coverimg.objects.all()
@@ -63,3 +62,16 @@ class livetvdlts(generics.RetrieveAPIView):
 class short_playlist(generics.ListAPIView):
     queryset = youtube_videoplaylist_atn.objects.all()[:1]
     serializer_class = shortplaylist
+
+
+
+@api_view()
+def polls_detail(request):
+    data = {"data": {
+        "web1": "https://www.atnmusic.tv/",
+        "web2": "http://atnislamic.tv/",
+        "web3": "https://www.atnnewstv.com/?app=home",
+        "web4": "https://www.atnbangla.tv/"
+
+    }}
+    return JsonResponse(data)
