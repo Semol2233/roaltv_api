@@ -26,3 +26,17 @@ class coverpage_seriaa(serializers.ModelSerializer):
             'moviePgaecover',
             'typeimg'
         ]
+
+
+class livetvlistss(serializers.ModelSerializer):
+
+    class Meta:
+        model = livetvlist
+        fields = [
+            'id',
+            'channe_name',
+            'channel_logo',
+            'channel_tvurl',
+            'release_date',
+
+        ]

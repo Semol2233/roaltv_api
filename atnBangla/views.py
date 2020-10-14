@@ -36,7 +36,23 @@ class atn_youtube_playlist(generics.ListAPIView):
 
 from rest_framework import filters
 
-class cover_img(generics.RetrieveAPIView):
+class apps_coverimgview(generics.ListAPIView):
     queryset           = apps_coverimg.objects.all()
     serializer_class   = coverpage_seriaa
-    lookup_field       = ('typeimg')
+    filter_backends    = [filters.SearchFilter]
+    search_fields      = ['typeimg']
+
+
+
+class livetvlisst(generics.ListAPIView):
+    queryset           = livetvlist.objects.all()
+    serializer_class   = livetvlistss
+    filter_backends    = [filters.SearchFilter]
+
+
+
+
+class livetvdlts(generics.RetrieveAPIView):
+    queryset = livetvlist.objects.all()
+    serializer_class = livetvlistss
+    lookup_field = ('id')

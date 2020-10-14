@@ -17,7 +17,7 @@ from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib import admin
 from django.urls import path,include
 from admin_penel.views import listhome,PostCreateView,list_youtube,Profile
-from atnBangla.views import atn_youtube_playlist,cover_img
+from atnBangla.views import atn_youtube_playlist,apps_coverimgview,livetvlisst,livetvdlts
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('roaltv_app.urls')),
@@ -34,7 +34,11 @@ urlpatterns = [
     path('pro/', Profile.as_view(), name='profile'),
 
     path('youtube_playlist/', atn_youtube_playlist.as_view()),
-    path('cover/<typeimg>/', cover_img.as_view()),
+    path('img/', apps_coverimgview.as_view()),
+
+    path('tvlist/', livetvlisst.as_view()),
+    path('dtlspage/<id>/', livetvdlts.as_view()),
+
 
 
 

@@ -18,6 +18,10 @@ admin.site.register(livetvlink)
 admin.site.register(about)
 admin.site.register(Profile)
 admin.site.register(apps_coverimg)
+admin.site.register(livetvlist)
+
+
+
 
 
 
