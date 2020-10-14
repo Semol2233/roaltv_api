@@ -75,3 +75,11 @@ class polls_detail(generics.ListAPIView):
     serializer_class = shortplssaylist
 
 
+@api_view()
+def fblink(request):
+    data = {"data": {
+        "fb": "test",
+
+
+    }}
+    return JsonResponse(data)

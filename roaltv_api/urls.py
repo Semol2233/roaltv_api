@@ -17,7 +17,7 @@ from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib import admin
 from django.urls import path,include
 from admin_penel.views import listhome,PostCreateView,list_youtube,Profile
-from atnBangla.views import atn_youtube_playlist,polls_detail,apps_coverimgview,short_playlist,livetvlisst,livetvdlts
+from atnBangla.views import atn_youtube_playlist,fblink,polls_detail,apps_coverimgview,short_playlist,livetvlisst,livetvdlts
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('roaltv_app.urls')),
@@ -40,9 +40,7 @@ urlpatterns = [
     path('dtlspage/<id>/', livetvdlts.as_view()),
     path('homepage_playlist', short_playlist.as_view()),
     path('weblist', polls_detail.as_view()),
-
-
-
+    path('fb', fblink),
 
 
 ]
