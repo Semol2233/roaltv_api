@@ -56,3 +56,10 @@ class livetvdlts(generics.RetrieveAPIView):
     queryset = livetvlist.objects.all()
     serializer_class = livetvlistss
     lookup_field = ('id')
+
+
+
+
+class short_playlist(generics.ListAPIView):
+    queryset = youtube_videoplaylist_atn.objects.all()[:1]
+    serializer_class = shortplaylist

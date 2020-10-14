@@ -40,3 +40,15 @@ class livetvlistss(serializers.ModelSerializer):
             'release_date',
 
         ]
+
+
+
+class shortplaylist(serializers.ModelSerializer):
+
+    class Meta:
+        model = youtube_videoplaylist_atn
+        fields = [
+            'playlist_name',
+            'channel_id',
+            'playlist_code'
+        ]
