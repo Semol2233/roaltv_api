@@ -19,6 +19,7 @@ from .models import *
 admin.site.register(Profile)
 admin.site.register(apps_coverimg)
 admin.site.register(livetvlist)
+admin.site.register(youtube_videoplaylist_atn)
 
 
 
