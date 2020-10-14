@@ -78,7 +78,7 @@ class polls_detail(generics.ListAPIView):
 @api_view()
 def fblink(request):
     data = {"data": {
-        "fb": "test",
+        "fb": "https://www.facebook.com/atnbanglanewsofficial/",
 
 
     }}
