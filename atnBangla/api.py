@@ -52,3 +52,13 @@ class shortplaylist(serializers.ModelSerializer):
             'channel_id',
             'playlist_code'
         ]
+
+
+class shortplssaylist(serializers.ModelSerializer):
+
+    class Meta:
+        model = liveweblisttvlist
+        fields = [
+            'channel_logo',
+            'web_link',
+        ]

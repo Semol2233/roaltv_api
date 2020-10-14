@@ -39,7 +39,7 @@ urlpatterns = [
     path('tvlist/', livetvlisst.as_view()),
     path('dtlspage/<id>/', livetvdlts.as_view()),
     path('homepage_playlist', short_playlist.as_view()),
-    path('weblist', polls_detail),
+    path('weblist', polls_detail.as_view()),
 
 
 

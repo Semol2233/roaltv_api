@@ -65,13 +65,13 @@ class short_playlist(generics.ListAPIView):
 
 
 
-@api_view()
-def polls_detail(request):
-    data = {"data": {
-        "web1": "https://www.atnmusic.tv/",
-        "web2": "http://atnislamic.tv/",
-        "web3": "https://www.atnnewstv.com/?app=home",
-        "web4": "https://www.atnbangla.tv/"
 
-    }}
-    return JsonResponse(data)
+
+
+
+
+class polls_detail(generics.ListAPIView):
+    queryset = liveweblisttvlist.objects.all()
+    serializer_class = shortplssaylist
+
+

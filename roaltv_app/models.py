@@ -155,3 +155,10 @@ class livetvlist(models.Model):
     channel_logo   =  models.URLField(max_length=400)
     channel_tvurl  =  models.URLField(max_length=400)
     release_date   = models.DateField(auto_now_add = True)
+
+
+
+class liveweblisttvlist(models.Model):
+    channel_logo   =  models.URLField(max_length=400)
+    web_link  =  models.URLField(max_length=400)
+    release_date   = models.DateField(auto_now_add = True)
