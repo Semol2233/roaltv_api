@@ -83,3 +83,25 @@ def fblink(request):
 
     }}
     return JsonResponse(data)
+
+
+
+
+
+class livetvhomwlist(generics.ListAPIView):
+    queryset = liveweblisttvlist.objects.all()[:2]
+    serializer_class = shortplssaylist
+
+
+
+@api_view()
+def newssite(request):
+    data = {"data": {
+        "newssite": "https://www.atnbangla.tv",
+
+
+    }}
+    return JsonResponse(data)
+
+
+
