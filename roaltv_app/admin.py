@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-admin.site.site_header = "NXT-1.0 - Admin panel"
+admin.site.site_header = "NXT-1.0 - ATN BANGLA"
 
 class post_modelsAdmin(admin.ModelAdmin):
     list_display = ('id','title','release_date')
