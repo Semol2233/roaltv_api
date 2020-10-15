@@ -1,4 +1,6 @@
 from django.contrib import admin
+from django.contrib.auth.models import User, Group
+
 
 admin.site.site_header = "NXT-1.0 - ATN BANGLA"
 
@@ -21,9 +23,8 @@ admin.site.register(apps_coverimg)
 admin.site.register(livetvlist)
 admin.site.register(youtube_videoplaylist_atn)
 admin.site.register(liveweblisttvlist)
-
-
-
+admin.site.unregister(User)
+admin.site.unregister(Group)
 
 
 
