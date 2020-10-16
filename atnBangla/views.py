@@ -7,7 +7,7 @@ from rest_framework import authentication
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from ATN(nxt1.0).models import *
+from roaltv_app.models import *
 from atnBangla.api import *
 from django.http import JsonResponse
 from rest_framework.decorators import api_view
