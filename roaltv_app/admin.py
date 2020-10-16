@@ -20,12 +20,12 @@ from .models import *
 # admin.site.register(about)
 # admin.site.register(Profile)
 admin.site.register(apps_coverimg)
+admin.site.register(admove_ad_code)
+
 admin.site.register(livetvlist)
 admin.site.register(youtube_videoplaylist_atn)
 admin.site.register(liveweblisttvlist)
 admin.site.register(about_atn)
 admin.site.unregister(User)
 admin.site.unregister(Group)
-
-
 
