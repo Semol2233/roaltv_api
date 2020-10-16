@@ -133,7 +133,7 @@ class admove_ad_code(models.Model):
 
 
     def __str__(self):
-        return self.ad_code    
+        return self.ads_page    
     class Meta:
         verbose_name = _("AdMob code")
         verbose_name_plural = _("AdMob code")
