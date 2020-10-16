@@ -18,7 +18,7 @@ from .models import *
 # admin.site.register(movie_pageCover)
 # admin.site.register(livetvlink)
 # admin.site.register(about)
-admin.site.register(Profile)
+# admin.site.register(Profile)
 admin.site.register(apps_coverimg)
 admin.site.register(livetvlist)
 admin.site.register(youtube_videoplaylist_atn)

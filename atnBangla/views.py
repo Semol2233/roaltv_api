@@ -111,3 +111,8 @@ class atn_about(generics.ListAPIView):
     serializer_class = atn_about_seri
 
 
+class ad_code(generics.ListAPIView):
+    queryset = admove_ad_code.objects.all()
+    serializer_class = adcode
+    filter_backends    = [filters.SearchFilter]
+    search_fields      = ['ads_page']

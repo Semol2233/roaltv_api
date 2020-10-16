@@ -73,3 +73,14 @@ class atn_about_seri(serializers.ModelSerializer):
         fields = [
             'description'
         ]
+
+
+class adcode(serializers.ModelSerializer):
+
+    class Meta:
+        model = admove_ad_code
+        fields = [
+            'ads_page',
+            'Ads_SDK_id',
+            'ad_code'
+        ]

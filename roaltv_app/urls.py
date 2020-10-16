@@ -19,8 +19,7 @@ urlpatterns = [
      path('mostpopular',views.bareking_news.as_view()),
      path('breking_news',views.all_news.as_view()),
      path('shortplaylist',views.short_playlist.as_view()),
-     path('about',views.about.as_view()), 
-     path('ad',views.ad_code.as_view()), 
+     path('about',views.about.as_view()),
      
 ]
  

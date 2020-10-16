@@ -111,7 +111,26 @@ def save_user_profile(sender, instance, **kwargs):
 
 
 class admove_ad_code(models.Model):
-    ad_code    = models.TextField(blank=True)
+    home_page_banner_ad = 'home_page_banner_ad'
+    youtube_page = 'youtube_page'
+    global_bottom_page_ads = 'home_page_bottom_ads'
+    home_web_tabs_ads = 'home_page_bottom_ads'
+    home_youtube_tabs_ads = 'home_page_bottom_ads'
+
+
+
+    CHOICES = (
+        (home_page_banner_ad, "home_page_banner_ad"),
+        (youtube_page, "youtube_page"),
+        (global_bottom_page_ads, "global_bottom_page_ads"),
+        (home_web_tabs_ads, "home_web_tabs_ads"),
+        (home_youtube_tabs_ads, "home_youtube_tabs_ads")
+
+    )
+    ads_page = models.CharField(max_length=10, choices = CHOICES,default=home_page_banner_ad,blank=True)
+    Ads_SDK_id  = models.TextField(blank=True)
+    ads_code    = models.TextField(blank=True)
+
 
     def __str__(self):
         return self.ad_code    
