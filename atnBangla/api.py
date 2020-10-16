@@ -82,5 +82,5 @@ class adcode(serializers.ModelSerializer):
         fields = [
             'ads_page',
             'Ads_SDK_id',
-            'ad_code'
+            'ads_code'
         ]
