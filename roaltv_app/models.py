@@ -175,6 +175,8 @@ class livetvlist(models.Model):
     channel_tvurl  =  models.URLField(max_length=400)
     release_date   = models.DateField(auto_now_add = True)
 
+    def __str__(self):
+        return self.channe_name    
     class Meta:
         verbose_name = _("Create livetv")
         verbose_name_plural = _("Create livetv")
