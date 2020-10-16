@@ -135,8 +135,8 @@ class admove_ad_code(models.Model):
     def __str__(self):
         return self.ads_page    
     class Meta:
-        verbose_name = _("AdMob code")
-        verbose_name_plural = _("AdMob code")
+        verbose_name = _("AdMob")
+        verbose_name_plural = _("AdMob")
 
 
 class apps_coverimg(models.Model):
@@ -152,8 +152,8 @@ class apps_coverimg(models.Model):
     def __str__(self):
         return self.typeimg 
     class Meta:
-        verbose_name = _("Home page cover img")
-        verbose_name_plural = _("Home page cover img")
+        verbose_name = _("cover img")
+        verbose_name_plural = _("cover img")
 
 
 class youtube_videoplaylist_atn(models.Model):
@@ -175,12 +175,20 @@ class livetvlist(models.Model):
     channel_tvurl  =  models.URLField(max_length=400)
     release_date   = models.DateField(auto_now_add = True)
 
+    class Meta:
+        verbose_name = _("Create livetv")
+        verbose_name_plural = _("Create livetv")
+
 
 
 class liveweblisttvlist(models.Model):
     channel_logo   =  models.URLField(max_length=400)
     web_link  =  models.URLField(max_length=400)
     release_date   = models.DateField(auto_now_add = True)
+
+    class Meta:
+        verbose_name = _("Create Weblist")
+        verbose_name_plural = _("Create Weblist")
 
 
 
@@ -193,5 +201,5 @@ class about_atn(models.Model):
     def __str__(self):
         return self.description    
     class Meta:
-        verbose_name = _("About")
-        verbose_name_plural = _("About")
+        verbose_name = _("Apps About")
+        verbose_name_plural = _("Apps About")
