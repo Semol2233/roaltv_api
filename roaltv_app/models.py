@@ -127,7 +127,7 @@ class admove_ad_code(models.Model):
         (home_youtube_tabs_ads, "home_youtube_tabs_ads")
 
     )
-    ads_page = models.CharField(max_length=10, choices = CHOICES,default=home_page_banner_ad,blank=True)
+    ads_page = models.CharField(max_length=200, choices = CHOICES,default=home_page_banner_ad,blank=True)
     Ads_SDK_id  = models.TextField(blank=True)
     ads_code    = models.TextField(blank=True)
 
