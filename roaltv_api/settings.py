@@ -33,7 +33,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
-    'roaltv_app',
+    'ATN(nxt1.0)',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',

@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class RoaltvAppConfig(AppConfig):
-    name = 'roaltv_app'
+    name = 'ATN-NEWS(NXT 1.0)'

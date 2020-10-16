@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from roaltv_app.models import *
+from ATN(nxt1.0).models import *
 from django.conf import settings
 from django.db import models
 from django.http import HttpRequest
