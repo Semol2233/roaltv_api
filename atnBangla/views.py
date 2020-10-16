@@ -105,3 +105,9 @@ def newssite(request):
 
 
 
+
+class atn_about(generics.ListAPIView):
+    queryset = about_atn.objects.all()
+    serializer_class = atn_about_seri
+
+

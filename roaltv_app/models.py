@@ -162,3 +162,17 @@ class liveweblisttvlist(models.Model):
     channel_logo   =  models.URLField(max_length=400)
     web_link  =  models.URLField(max_length=400)
     release_date   = models.DateField(auto_now_add = True)
+
+
+
+
+
+
+class about_atn(models.Model):
+    description    = models.TextField(blank=True)
+
+    def __str__(self):
+        return self.description    
+    class Meta:
+        verbose_name = _("About")
+        verbose_name_plural = _("About")

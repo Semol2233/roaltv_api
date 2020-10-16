@@ -62,3 +62,14 @@ class shortplssaylist(serializers.ModelSerializer):
             'channel_logo',
             'web_link',
         ]
+
+
+
+
+class atn_about_seri(serializers.ModelSerializer):
+
+    class Meta:
+        model = about_atn
+        fields = [
+            'description'
+        ]
