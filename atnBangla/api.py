@@ -44,16 +44,16 @@ class livetvlistss(serializers.ModelSerializer):
 
 
 class shortplaylist(serializers.ModelSerializer):
-    videos = serializers.SerializerMethodField("get_videos")
+    name = serializers.SerializerMethodField("get_name")
     class Meta:
         model = youtube_videoplaylist_atn
         fields = [
             'playlist_name',
             'channel_id',
             'playlist_code',
-            'videos'
+            'name'
         ]
-    def get_videos(self, obj):
+    def get_name(self, obj):
         return "Videos"
     
 
