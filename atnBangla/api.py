@@ -50,7 +50,8 @@ class shortplaylist(serializers.ModelSerializer):
         fields = [
             'playlist_name',
             'channel_id',
-            'playlist_code'
+            'playlist_code',
+            'name'
         ]
     def get_name(self, obj):
         return "Videos"
