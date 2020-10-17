@@ -44,7 +44,7 @@ class livetvlistss(serializers.ModelSerializer):
 
 
 class shortplaylist(serializers.ModelSerializer):
-
+    name = serializers.SerializerMethodField("get_name")
     class Meta:
         model = youtube_videoplaylist_atn
         fields = [
@@ -52,18 +52,24 @@ class shortplaylist(serializers.ModelSerializer):
             'channel_id',
             'playlist_code'
         ]
+    def get_name(self, obj):
+        return "Videos"
+    
 
 
 class shortplssaylist(serializers.ModelSerializer):
-
+    name = serializers.SerializerMethodField("get_name")
     class Meta:
         model = liveweblisttvlist
         fields = [
             'channel_logo',
             'web_link',
+            'name'
         ]
 
-
+    def get_name(self, obj):
+        return "News"
+    
 
 
 class atn_about_seri(serializers.ModelSerializer):
