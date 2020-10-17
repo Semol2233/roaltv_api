@@ -5,16 +5,16 @@ from django.db import models
 from django.http import HttpRequest
 
 
-class youtubevideos_playlistseri(serializers.ModelSerializer):
+# class youtubevideos_playlistseri(serializers.ModelSerializer):
 
-    class Meta:
-        model = youtube_videoplaylist
-        fields = [
-            'id',
-            'playlist_name',
-            'playlist_code',
-            'channel_id'
-        ]
+#     class Meta:
+#         model = youtube_videoplaylist
+#         fields = [
+#             'id',
+#             'playlist_name',
+#             'playlist_code',
+#             'channel_id'
+#         ]
 
 
 

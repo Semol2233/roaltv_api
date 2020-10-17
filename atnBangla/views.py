@@ -25,7 +25,7 @@ class youtube_playlist(pagination.PageNumberPagination):
 
 class atn_youtube_playlist(generics.ListAPIView):
     queryset = youtube_videoplaylist_atn.objects.all().order_by('-id')
-    serializer_class = youtubevideos_playlistseri
+    serializer_class = shortplaylist
     pagination_class = youtube_playlist
 
 
@@ -98,8 +98,6 @@ class livetvhomwlist(generics.ListAPIView):
 def newssite(request):
     data = {"data": {
         "newssite": "https://www.atnbangla.tv",
-
-
     }}
     return JsonResponse(data)
 
@@ -126,8 +124,6 @@ class ad_code(generics.ListAPIView):
 def apps_info(request):
     data = {"data": {
         "data": "ATN Bangla is a Bengali-language digital cable television channel. It transmits from its studio in Dhaka, Bangladesh.This is the first satellite based channel in Bangladesh. The channel is transmitted in South Asia, the Middle East, Europe, and North America",
-
-
 
     }}
     return JsonResponse(data)
