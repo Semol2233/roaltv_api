@@ -67,13 +67,17 @@ class shortplssaylist(serializers.ModelSerializer):
 
 
 class atn_about_seri(serializers.ModelSerializer):
-
+    img = serializers.SerializerMethodField("get_img")
     class Meta:
         model = about_atn
         fields = [
-            'description'
+            'description',
+            'img'
         ]
 
+    def get_img(self, obj):
+        return "https://scontent-mxp1-1.xx.fbcdn.net/v/t31.0-8/13415525_1003408123070010_6884761071434198727_o.jpg?_nc_cat=102&_nc_sid=09cbfe&_nc_ohc=-vNgLwex8fIAX_BnbG4&_nc_ht=scontent-mxp1-1.xx&oh=36c34974fd2b8cfb4c741ddfd3b37a93&oe=5FAFDD46"
+    
 
 class adcode(serializers.ModelSerializer):
 

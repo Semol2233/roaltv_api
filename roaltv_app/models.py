@@ -199,9 +199,10 @@ class liveweblisttvlist(models.Model):
 
 class about_atn(models.Model):
     description    = models.TextField(blank=True)
-
     def __str__(self):
         return self.description    
     class Meta:
         verbose_name = _("Apps About")
         verbose_name_plural = _("Apps About")
+
+

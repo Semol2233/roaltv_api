@@ -116,3 +116,20 @@ class ad_code(generics.ListAPIView):
     serializer_class = adcode
     filter_backends    = [filters.SearchFilter]
     search_fields      = ['ads_page']
+
+
+
+
+
+
+@api_view()
+def apps_info(request):
+    data = {"data": {
+        "data": "ATN Bangla is a Bengali-language digital cable television channel. It transmits from its studio in Dhaka, Bangladesh.This is the first satellite based channel in Bangladesh. The channel is transmitted in South Asia, the Middle East, Europe, and North America",
+
+
+
+    }}
+    return JsonResponse(data)
+
+
