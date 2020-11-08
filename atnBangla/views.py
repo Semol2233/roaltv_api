@@ -78,8 +78,7 @@ class polls_detail(generics.ListAPIView):
 @api_view()
 def fblink(request):
     data = {"data": {
-        "fb": "https://www.facebook.com/atnbanglanewsofficial/",
-        "img":"https://i2.wp.com/www.atnbangla.tv/wp-content/uploads/2015/09/chairman-atn-mahfuz.jpg"
+        "fb": "https://www.facebook.com/atnbanglanewsofficial/"
 
 
     }}
@@ -125,6 +124,7 @@ class ad_code(generics.ListAPIView):
 def apps_info(request):
     data = {"data": {
         "data": "ATN Bangla is a Bengali-language digital cable television channel. It transmits from its studio in Dhaka, Bangladesh.This is the first satellite based channel in Bangladesh. The channel is transmitted in South Asia, the Middle East, Europe, and North America",
+         "img":"https://i2.wp.com/www.atnbangla.tv/wp-content/uploads/2015/09/chairman-atn-mahfuz.jpg"
 
     }}
     return JsonResponse(data)
