@@ -79,6 +79,7 @@ class polls_detail(generics.ListAPIView):
 def fblink(request):
     data = {"data": {
         "fb": "https://www.facebook.com/atnbanglanewsofficial/",
+        "img":"https://i2.wp.com/www.atnbangla.tv/wp-content/uploads/2015/09/chairman-atn-mahfuz.jpg"
 
 
     }}

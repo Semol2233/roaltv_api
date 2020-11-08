@@ -25,7 +25,7 @@ SECRET_KEY = 'm61-)!csjs(*2-dv_@w2eewgkos^k-1ma@vwdq5d6xw$$_6a5m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['test.reolib.com','api.nuxtit.com','127.0.0.1']
+ALLOWED_HOSTS = ['test.reolib.com','api.nuxtit.com','127.0.0.1','*','172.16.16.10:9380']
 
 CORS_ORIGIN_ALLOW_ALL = True
 # Application definition
