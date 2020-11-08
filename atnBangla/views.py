@@ -130,3 +130,13 @@ def apps_info(request):
     return JsonResponse(data)
 
 
+@api_view()
+def home_page_api(request):
+    data = {"data": {
+      "name1":"Videos",
+      "name2":"News",
+
+    }}
+    return JsonResponse(data)
+
+
