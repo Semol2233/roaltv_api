@@ -28,4 +28,4 @@ admin.site.register(liveweblisttvlist)
 admin.site.register(about_atn)
 admin.site.unregister(User)
 admin.site.unregister(Group)
-
+admin.site.register(youtube_videoplaylist)
